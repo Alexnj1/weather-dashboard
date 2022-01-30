@@ -77,3 +77,26 @@ button:hover {
 .future-display {
     margin: 10px;
 }
+
+.future-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-card {
+    background-color: rgb(46, 47, 61);
+    color: white;
+    padding: 5px;
+    margin: 10px 10px 10px 0;
+    width: 150px;
+    height: 170px;
+}
+
+.future-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.future-card p {
+    font-size: 15px;
+}
