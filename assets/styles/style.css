@@ -39,6 +39,12 @@ main {
     border-radius: 5px;
 }
 
+.city-save {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
 button {
     margin: 10px 0 15px;
     height: 30px;
