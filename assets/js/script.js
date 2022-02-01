@@ -1,5 +1,5 @@
 
-var apiKey = '4db674b8f49814db2b9ea15729fac8ea'
+const apiKey = '4db674b8f49814db2b9ea15729fac8ea'
 var searchButton = document.querySelector('.city-submit')
 var searchTerm = document.querySelector('input')
 var citySaveArea = document.querySelector('.city-save')
@@ -7,7 +7,6 @@ var weatherDisplay = document.querySelector('.weather-display')
 var futureCardDisplay = document.querySelector('.future-cards')
 var resetButton =  document.querySelector('.reset')
 var clearButton = document.querySelector('.clear-save')
-// var cityButton = document.querySelector ('.saved-city-button')
 var cities = JSON.parse(localStorage.getItem('cities')) || []
 
 
@@ -22,7 +21,6 @@ function getLatLong(city) {
             if (response.ok) {
                 response.json()
                 .then(function(data){
-                    // storeCity()
                     lat = data.coord.lat.toString()
                     long = data.coord.lon.toString()
 
@@ -62,13 +60,7 @@ function displayCurrentWeatherData (data) {
     weatherDisplay.textContent = ''
     var date = moment().format('MMM Do YYYY')
     var city = document.createElement('h3')
-
-    // if (!searchTerm.value) {
-        // city.textContent = (cityButton.textContent + ' (' + date + ')').toUpperCase()
-    // } else {
-        city.textContent = (searchTerm.value + ' (' + date + ')').toUpperCase()
-
-    // }
+    city.textContent = (searchTerm.value + ' (' + date + ')').toUpperCase()
 
     var temp = document.createElement('p')
     temp.textContent = ('Temp: ' + data.current.temp + '°F')
@@ -92,7 +84,6 @@ function displayCurrentWeatherData (data) {
     var uv = document.createElement('p')
     uv.textContent = ('UV Index: ')
 
-    // //(city, temp, wind, humidity, uvNumber)
     uv.appendChild(uvNumber)
     weatherDisplay.appendChild(city)
     weatherDisplay.appendChild(temp)
@@ -100,13 +91,10 @@ function displayCurrentWeatherData (data) {
     weatherDisplay.appendChild(humidity)
     weatherDisplay.appendChild(uv)
 
-    // searchTerm.value = ''
 }
 
 function displayFutureWeatherData (data) {
-    // //(data)
     date = moment()
-    // //(date)
     futureCardDisplay.textContent = ''
     for (i=0; i<=4; i++) {
        var container = document.createElement('div')
@@ -138,16 +126,9 @@ function storeCity (cities) {
 }
 
 function loadCity () {
-    // // (cities)
-
     if (cities == null) {
         clickListener()
     } else {
-        // // (cities.length -= 1)
-        // ctrl z from here, you were testing if you could manually keep the display at the end by defining i
-        // try to put the loop back and define i like this
-        // i=cities.length -1
-            
         for (i=0; i<cities.length; i++) { 
             var cityButton = document.createElement('button')
             cityButton.className = 'saved-city-button'
@@ -156,44 +137,27 @@ function loadCity () {
         
             citySaveArea.appendChild(cityButton)
 
-            
-                
             cityButton.addEventListener('click', function(event) {
             var savedCity = event.target.textContent
             searchTerm.value = event.target.textContent
-            //(event.target.textContent)
+            searchTerm.disabled = true
             getLatLong(savedCity)
             })
-         
-        }
-        
-        
-        // (cityButton.textContent)
-        
+        }        
         searchTerm.value = ''
         clickListener(cityButton)
-
-
     }
-    
 }
 
 
 
-function clickListener (cityButton) {
-    
+function clickListener () {
     searchButton.addEventListener('click', function() {
     searchTerm.disabled = true
     weatherDisplay.textContent = ''
     var city = searchTerm.value
     getLatLong(city)
   })
-
-//     cityButton.addEventListener('click', function() {
-//     var savedCity = cityButton.textContent
-//     // (savedCity)
-//     getLatLong(savedCity)
-//   })
 }
 
 resetButton.addEventListener ('click', function() {
@@ -203,7 +167,6 @@ resetButton.addEventListener ('click', function() {
 clearButton.addEventListener ('click', function() {
     localStorage.removeItem('cities')
     document.location.reload(true)
-    // storeCity()
 })
 
 
