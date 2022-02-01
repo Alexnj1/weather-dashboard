@@ -1,118 +1,122 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background-image: linear-gradient(to right, rgb(77, 77, 224), rgb(70, 1, 70));
-    color: white;
-    text-align: center;
-    padding: 10px;
+  background-image: linear-gradient(to right, rgb(77, 77, 224), rgb(70, 1, 70));
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 main {
-    display: flex;
+  display: flex;
 }
 
 #city-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #city-container h4 {
-    margin: 0;
+  margin: 0;
 }
 
 .city-search {
-    display: flex;
-    flex-direction: column;
-    border-bottom: solid gray;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid gray;
+  margin: 10px;
 }
 
 .city-search h2 {
-    margin: 5px;
-    font-weight: 700;
+  margin: 5px;
+  font-weight: 700;
 }
 
 .city-search input {
-    height: 40px;
-    /* width: 400px; */
-    margin: 10px 0;
-    border-radius: 5px;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
 
 .city-save {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .clear-save {
-    margin: 0;
+  margin: 0;
 }
 
 button {
-    margin: 10px 0 15px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: rgb(95, 191, 250);
-    color: white;
-    font-weight: bold;
-    font-size: large;
+  margin: 10px 0 15px;
+  height: 30px;
+  border-radius: 5px;
+  /* background-color: rgb(95, 191, 250); */
+  background-color: rgb(164, 164, 173);
+  color: white;
+  font-weight: bold;
+  font-size: large;
 }
-
-
 
 button:hover {
-    box-shadow: 0 0 10px black;
-    transition: .2s;
+  background-color: cornflowerblue;
+  box-shadow: 0 0 10px black;
+  transition: 0.2s;
 }
 
-/* #weather-container {
-    width: 70%;
-} */
+.city-submit {
+  background-color: cornflowerblue;
+}
 
 .weather-display {
-    border: solid 3px gray;
-    height: 300px;
-    margin: 10px;
+  border: solid 3px gray;
+  border-radius: 15px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
 }
 
 .weather-display h3 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .weather-display p span {
-    padding: 5px;
-    color: white;
-    font-weight: bold;
+  padding: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .future-display {
-    margin: 10px;
+  margin: 10px;
 }
 
 .future-cards {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .future-card {
-    background-color: rgb(46, 47, 61);
-    color: white;
-    padding: 5px;
-    margin: 10px 10px 10px 0;
-    width: 150px;
-    height: 170px;
+  text-align: center;
+  background-color: rgb(46, 47, 61);
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+  margin: 10px 10px 10px 0;
+  width: 250px;
+  height: 250px;
 }
 
 .future-card h4 {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .future-card p {
-    font-size: 15px;
+  font-size: 15px;
+  font-weight: bold;
 }
