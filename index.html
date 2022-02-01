@@ -16,15 +16,20 @@
     <main class="row">
         <section id="city-container" class="col-3">
             <div class="city-search">
-                <h2>Search for a City:</h2>
+                
+                <h2 class="text-center">Search for a City:</h2>
                 <input type="text" class="city-input" style="appearance: none;">
                 <button type="submit" class="city-submit" style="appearance: none;">Search</button>
+                <button class="reset" style="appearance: none;">Reset Search</button>
             </div>
 
+            <h4 class="text-center">Search History <span><button class="clear-save">clear</button></span> </h4>
             <div class="city-save"></div>
+            
         </section>
 
         <section id="weather-container" class="col-9">
+            
             <div class="weather-display"></div>
             <div class="future-display">
                 <h3>5-Day Forecast:</h3>

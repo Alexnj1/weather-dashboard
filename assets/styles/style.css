@@ -20,6 +20,10 @@ main {
     flex-direction: column;
 }
 
+#city-container h4 {
+    margin: 0;
+}
+
 .city-search {
     display: flex;
     flex-direction: column;
@@ -45,6 +49,10 @@ main {
     margin: 10px;
 }
 
+.clear-save {
+    margin: 0;
+}
+
 button {
     margin: 10px 0 15px;
     height: 30px;
@@ -54,6 +62,8 @@ button {
     font-weight: bold;
     font-size: large;
 }
+
+
 
 button:hover {
     box-shadow: 0 0 10px black;
