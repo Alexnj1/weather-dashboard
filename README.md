@@ -1,4 +1,4 @@
-# weather-dashborad
+# weather-dashboard
 
 ### This online weather dashboard application allows the user to view weather conditions from cities all over the world.
 ### Includes the ability to view both current weather data and a future five day forecast.
